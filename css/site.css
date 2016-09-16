@@ -1,0 +1,14 @@
+.list-group-item {
+    background-color: transparent ;
+    border: none;
+}
+
+.panel ul{
+    list-style: none;
+}
+
+ul{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}

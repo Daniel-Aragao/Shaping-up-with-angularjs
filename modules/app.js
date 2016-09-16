@@ -16,6 +16,18 @@
                     full: "http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angular_js/assets/demo/images/gem-06.gif"
                 }
             ],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this product!",
+                    author: "joe@thomas.com"
+                },
+                {
+                    stars: 1,
+                    body: "This product sucks",
+                    author: "tim@hater.com"
+                }
+            ],
             canPurchase: true,
             soldOut: true
         },
@@ -42,6 +54,15 @@
         this.isSelected = function (checktab) {
             return this.tab === checktab;
         };
+    });
+
+    app.controller("ReviewController", function () {
+        this.review = {};
+        
+        this.addReview = function (product) {
+            product.reviews.push(this.review);
+            this.review = {};
+        }
     });
 })();
 
